@@ -1,0 +1,317 @@
+/* =========================================
+   1. RESET & FONDASI (MOBILE-FIRST)
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #e2e8f0; /* Latar abu-abu ala background HP */
+    display: flex;
+    justify-content: center; /* Memastikan posisi di tengah kalau di laptop */
+}
+
+/* =========================================
+   2. MOBILE CONTAINER (BINGKAI APLIKASI)
+========================================= */
+.mobile-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 480px; /* Batas maksimal lebar layar (ukuran HP besar) */
+    min-height: 100vh; /* Minimal setinggi layar penuh */
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Bayangan bingkai HP di laptop */
+    position: relative;
+}
+
+/* =========================================
+   3. HEADER & SMART GREETING
+========================================= */
+.greeting-section {
+    margin-bottom: 25px;
+}
+
+.profil-singkat p {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.profil-singkat h1 {
+    font-size: 1.5rem;
+    color: #0f172a;
+    font-weight: 800;
+}
+
+.pesan-sistem {
+    font-size: 0.85rem;
+    color: #38bdf8; /* Warna aksen biru Paskalem */
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* =========================================
+   4. KARTU MEMBERSHIP & BARCODE
+========================================= */
+.card-membership {
+    background: linear-gradient(135deg, #1e293b, #0f172a); /* Gradien hitam elegan */
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.header-kartu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.header-kartu h3 {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.badge-status.aktif {
+    background-color: #22c55e; /* Hijau sukses */
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.barcode-area {
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.img-qr {
+    max-width: 140px;
+    height: auto;
+}
+
+.instruksi {
+    color: #1e293b;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.footer-kartu p {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.footer-kartu h2 {
+    font-size: 1.8rem;
+    color: #f8fafc;
+}
+
+/* =========================================
+   5. KARTU PROGRESS (GAMIFIKASI KALORI)
+========================================= */
+.card-progress {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.header-progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.header-progress h3 {
+    font-size: 1.05rem;
+    color: #1e293b;
+}
+
+.link-detail {
+    font-size: 0.8rem;
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Animasi Progress Bar */
+.progress-bar-container {
+    background-color: #f1f5f9;
+    border-radius: 10px;
+    height: 12px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-bar-fill {
+    background: linear-gradient(90deg, #38bdf8, #3b82f6);
+    height: 100%;
+    border-radius: 10px;
+    transition: width 1s ease-in-out; /* Animasi saat baris terisi */
+}
+
+.teks-progress {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 10px;
+}
+
+.pesan-apresiasi {
+    background-color: #fef3c7; /* Latar kuning peringatan */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.pesan-apresiasi p {
+    font-size: 0.8rem;
+    color: #92400e;
+    font-weight: 600;
+}
+
+/* =========================================
+   6. MENU CEPAT (GRID 2 KOLOM)
+========================================= */
+.quick-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Otomatis bagi 2 kotak ke samping */
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.menu-item {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 20px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #1e293b;
+    transition: all 0.2s; /* Animasi saat tombol ditekan */
+}
+
+.menu-item:hover, .menu-item:active {
+    background: #e0f2fe;
+    border-color: #38bdf8;
+    transform: translateY(-2px); /* Efek tombol naik sedikit */
+}
+
+.ikon-menu {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.menu-item span {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* =========================================
+   7. TOMBOL LOGOUT
+========================================= */
+.logout-area {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.btn-logout-member {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    background-color: #fee2e2;
+    color: #ef4444;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-logout-member:hover {
+    background-color: #fca5a5;
+    color: white;
+}
+
+/* =========================================
+   8. KARTU JADWAL PT (AKTIF)
+========================================= */
+.card-jadwal-pt {
+    background: linear-gradient(135deg, #e0f2fe, #bae6fd); /* Biru muda biar seger */
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #7dd3fc;
+}
+
+.header-jadwal h3 {
+    font-size: 1.05rem;
+    color: #0369a1;
+    margin-bottom: 15px;
+}
+
+.info-jadwal {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.foto-pt img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+    background-color: #cbd5e1; /* Warna dasar kalau gambar belum load */
+}
+
+.detail-jadwal h4 {
+    font-size: 0.95rem;
+    color: #0c4a6e;
+    margin-bottom: 3px;
+}
+
+.detail-jadwal .waktu {
+    font-size: 0.85rem;
+    font-weight: 900;
+    color: #0284c7;
+}
+
+.detail-jadwal .fokus {
+    font-size: 0.8rem;
+    color: #0ea5e9;
+    font-style: italic;
+}
+
+.btn-outline-jadwal {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid #0284c7;
+    color: #0284c7;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.btn-outline-jadwal:hover {
+    background: #0284c7;
+    color: #ffffff;
+}
